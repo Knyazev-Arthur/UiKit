@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UISwitch2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ige-BJ-IK1">
+                                <rect key="frame" x="16" y="65" width="343" height="32"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMf-ZB-eq1">
+                                <rect key="frame" x="126.5" y="112" width="122" height="30"/>
+                                <state key="normal" title="Отправить отзыв"/>
+                                <connections>
+                                    <action selector="sendAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="0M4-Ff-M7N"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Хотите оценить приложение ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMi-xt-ZhW">
+                                <rect key="frame" x="16" y="28" width="243" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="243" id="9zv-3M-ICa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ige-BJ-IK1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Vxu-tA-0v3"/>
+                            <constraint firstItem="Ige-BJ-IK1" firstAttribute="top" secondItem="EMi-xt-ZhW" secondAttribute="bottom" constant="16" id="aZN-iP-lRi"/>
+                            <constraint firstItem="EMi-xt-ZhW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="cdr-yf-LIT"/>
+                            <constraint firstItem="TMf-ZB-eq1" firstAttribute="top" secondItem="Ige-BJ-IK1" secondAttribute="bottom" constant="16" id="fCZ-wl-VRO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ige-BJ-IK1" secondAttribute="trailing" constant="16" id="itx-aR-PRy"/>
+                            <constraint firstItem="EMi-xt-ZhW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="lX1-4V-u6n"/>
+                            <constraint firstItem="TMf-ZB-eq1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yRz-FF-xtF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="EMi-xt-ZhW" id="mpy-5U-NeQ"/>
+                        <outlet property="segmentedControl" destination="Ige-BJ-IK1" id="Xbf-CP-HhT"/>
+                        <outlet property="sendButton" destination="TMf-ZB-eq1" id="MLm-zI-H7C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58.399999999999999" y="112.89355322338831"/>
+        </scene>
+    </scenes>
+</document>
